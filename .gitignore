@@ -1,1 +1,3 @@
 node_modules/
+# bandle.js も、無視します
+bundle.js
