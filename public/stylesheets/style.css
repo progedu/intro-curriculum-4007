@@ -11,5 +11,7 @@ a {
   width: 100pt;
   height: 100pt;
   margin: 20pt;
-  background-color: chocolate;
+  background-color: rgb(28, 187, 187);
+    border: solid 3px #6091d3;/*線で囲む*/
+    border-radius: 10px;/*角の丸み付ける*/
 }
