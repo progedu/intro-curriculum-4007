@@ -3,6 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  //- ユーザーデータが設定されている場合（ログイン中）は
+  //- ログアウトページへのリンクを表示し、
+  //- ログインしていない場合はログインページへのリンクを表示する
   if user
     p Hello, #{user.username}
     a(href="/logout") Logout
@@ -10,4 +13,6 @@ block content
     a(href="/login") Login
   div(id="block", class="block")
   button(id="scaling-button") 拡大縮小
+  button(id="moving-button") 移動
+  //- webpackでひとまとめにしたJSファイルを読み込む
   script(src="/javascripts/bundle.js")
