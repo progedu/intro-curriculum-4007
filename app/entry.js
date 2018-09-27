@@ -10,6 +10,6 @@ scalingButton.click(() => {
 });
 
 movingButton.click(() => {
-  block.animate({ 'marginLeft': '500px' }, 2000);
-  block.animate({ 'marginLeft': '20px' }, 2000);
+  block.animate({ 'marginLeft': '500px' }, 500);
+  block.animate({ 'marginLeft': '20px' }, 1000);
 });
