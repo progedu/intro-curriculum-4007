@@ -77,11 +77,11 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var block = (0, _jquery2.default)('#block');
-var scalingButton = (0, _jquery2.default)('#scaling-button');
+var movingButton = (0, _jquery2.default)('#moving-button');
 
-scalingButton.click(function () {
-  block.animate({ width: '200pt', height: '200pt' }, 2000);
-  block.animate({ width: '100pt', height: '100pt' }, 2000);
+movingButton.click(function () {
+  block.animate({ 'marginLeft': '500px' }, 500);
+  block.animate({ 'marginLeft': '20px' }, 1000);
 });
 
 /***/ }),
