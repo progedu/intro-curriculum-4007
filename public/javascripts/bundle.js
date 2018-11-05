@@ -84,6 +84,13 @@ scalingButton.click(function () {
   block.animate({ width: '100pt', height: '100pt' }, 2000);
 });
 
+var movingButton = (0, _jquery2.default)('#moving-button');
+
+movingButton.click(function () {
+  block.animate({ 'marginLeft': '500px' }, 500);
+  block.animate({ 'marginLeft': '20px' }, 1000);
+});
+
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
