@@ -67,12 +67,47 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+	'use strict';
+	const  $ = __webpack_require__(1);
+	const  block = $('#block');
+	const  scalingButton = $('#scaling-button');
+	// jqueryオブジェクト作成
+	const movingButton = $('#moving-button');
+=======
 "use strict";
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 
+<<<<<<< HEAD
+	movingButton.click(() => {
+	  block.animate({ 'marginLeft': '500px' },500);
+	  block.animate({ 'marginLeft': '20px' },1000);
+	});
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	 * jQuery JavaScript Library v2.2.4
+	 * http://jquery.com/
+	 *
+	 * Includes Sizzle.js
+	 * http://sizzlejs.com/
+	 *
+	 * Copyright jQuery Foundation and other contributors
+	 * Released under the MIT license
+	 * http://jquery.org/license
+	 *
+	 * Date: 2016-05-20T17:23Z
+	 */
+=======
 var _jquery = __webpack_require__(1);
 
 var _jquery2 = _interopRequireDefault(_jquery);
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -153,7 +188,12 @@ var class2type = {};
 
 var toString = class2type.toString;
 
+<<<<<<< HEAD
+	var
+		version = "2.2.4",
+=======
 var hasOwn = class2type.hasOwnProperty;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 var fnToString = hasOwn.toString;
 
@@ -395,11 +435,31 @@ jQuery.extend( {
 		throw new Error( msg );
 	},
 
+<<<<<<< HEAD
+		isPlainObject: function( obj ) {
+			var key;
+=======
 	noop: function() {},
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 	isPlainObject: function( obj ) {
 		var proto, Ctor;
 
+<<<<<<< HEAD
+			// Not own constructor property must be Object
+			if ( obj.constructor &&
+					!hasOwn.call( obj, "constructor" ) &&
+					!hasOwn.call( obj.constructor.prototype || {}, "isPrototypeOf" ) ) {
+				return false;
+			}
+
+			// Own properties are enumerated firstly, so to speed up,
+			// if last one is own, then all properties are own
+			for ( key in obj ) {}
+
+			return key === undefined || hasOwn.call( obj, key );
+		},
+=======
 		// Detect obvious negatives
 		// Use toString instead of jQuery.type to catch host objects
 		if ( !obj || toString.call( obj ) !== "[object Object]" ) {
@@ -407,6 +467,7 @@ jQuery.extend( {
 		}
 
 		proto = getProto( obj );
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 		// Objects with no prototype (e.g., `Object.create( null )`) are plain
 		if ( !proto ) {
@@ -4724,7 +4785,15 @@ function showHide( elements, show ) {
 				dataPriv.set( elem, "display", display );
 			}
 		}
+<<<<<<< HEAD
+		if ( fn === false ) {
+			fn = returnFalse;
+		} else if ( !fn ) {
+			return elem;
+		}
+=======
 	}
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 	// Set the display of the elements in a second loop to avoid constant reflow
 	for ( index = 0; index < length; index++ ) {
@@ -5095,8 +5164,19 @@ jQuery.event = {
 				continue;
 			}
 
+<<<<<<< HEAD
+	// jQuery.Event is based on DOM3 Events as specified by the ECMAScript Language Binding
+	// http://www.w3.org/TR/2003/WD-DOM-Level-3-Events-20030331/ecma-script-binding.html
+	jQuery.Event.prototype = {
+		constructor: jQuery.Event,
+		isDefaultPrevented: returnFalse,
+		isPropagationStopped: returnFalse,
+		isImmediatePropagationStopped: returnFalse,
+		isSimulated: false,
+=======
 			// If event changes its type, use the special event handlers for the changed type
 			special = jQuery.event.special[ type ] || {};
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 			// If selector defined, determine special event api type, otherwise given type
 			type = ( selector ? special.delegateType : special.bindType ) || type;
@@ -5104,6 +5184,10 @@ jQuery.event = {
 			// Update special based on newly reset type
 			special = jQuery.event.special[ type ] || {};
 
+<<<<<<< HEAD
+			if ( e && !this.isSimulated ) {
+				e.preventDefault();
+=======
 			// handleObj is passed to all event handlers
 			handleObj = jQuery.extend( {
 				type: type,
@@ -5129,21 +5213,34 @@ jQuery.event = {
 						elem.addEventListener( type, eventHandle );
 					}
 				}
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			}
 
 			if ( special.add ) {
 				special.add.call( elem, handleObj );
 
+<<<<<<< HEAD
+			if ( e && !this.isSimulated ) {
+				e.stopPropagation();
+=======
 				if ( !handleObj.handler.guid ) {
 					handleObj.handler.guid = handler.guid;
 				}
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			}
 
+<<<<<<< HEAD
+			this.isImmediatePropagationStopped = returnTrue;
+
+			if ( e && !this.isSimulated ) {
+				e.stopImmediatePropagation();
+=======
 			// Add to the element's handler list, delegates in front
 			if ( selector ) {
 				handlers.splice( handlers.delegateCount++, 0, handleObj );
 			} else {
 				handlers.push( handleObj );
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			}
 
 			// Keep track of which events have ever been used, for event optimization
@@ -5236,6 +5333,25 @@ jQuery.event = {
 			handlers = ( dataPriv.get( this, "events" ) || {} )[ event.type ] || [],
 			special = jQuery.event.special[ event.type ] || {};
 
+<<<<<<< HEAD
+	// Manipulating tables requires a tbody
+	function manipulationTarget( elem, content ) {
+		return jQuery.nodeName( elem, "table" ) &&
+			jQuery.nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ?
+
+			elem.getElementsByTagName( "tbody" )[ 0 ] ||
+				elem.appendChild( elem.ownerDocument.createElement( "tbody" ) ) :
+			elem;
+	}
+
+	// Replace/restore the type attribute of script elements for safe DOM manipulation
+	function disableScript( elem ) {
+		elem.type = ( elem.getAttribute( "type" ) !== null ) + "/" + elem.type;
+		return elem;
+	}
+	function restoreScript( elem ) {
+		var match = rscriptTypeMasked.exec( elem.type );
+=======
 		// Use the fix-ed jQuery.Event rather than the (read-only) native event
 		args[ 0 ] = event;
 
@@ -5244,6 +5360,7 @@ jQuery.event = {
 		}
 
 		event.delegateTarget = this;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 		// Call the preDispatch hook for the mapped type, and let it bail if desired
 		if ( special.preDispatch && special.preDispatch.call( this, event ) === false ) {
@@ -6010,10 +6127,15 @@ jQuery.fn.extend( {
 		} );
 	},
 
+<<<<<<< HEAD
+			if ( !view || !view.opener ) {
+				view = window;
+=======
 	after: function() {
 		return domManip( this, arguments, function( elem ) {
 			if ( this.parentNode ) {
 				this.parentNode.insertBefore( elem, this.nextSibling );
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			}
 		} );
 	},
@@ -6171,6 +6293,21 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		var divStyle = window.getComputedStyle( div );
 		pixelPositionVal = divStyle.top !== "1%";
 
+<<<<<<< HEAD
+		computed = computed || getStyles( elem );
+		ret = computed ? computed.getPropertyValue( name ) || computed[ name ] : undefined;
+
+		// Support: Opera 12.1x only
+		// Fall back to style even without computed
+		// computed is undefined for elems on document fragments
+		if ( ( ret === "" || ret === undefined ) && !jQuery.contains( elem.ownerDocument, elem ) ) {
+			ret = jQuery.style( elem, name );
+		}
+
+		// Support: IE9
+		// getPropertyValue is only needed for .css('filter') (#12537)
+		if ( computed ) {
+=======
 		// Support: Android 4.0 - 4.3 only, Firefox <=3 - 44
 		reliableMarginLeftVal = roundPixelMeasures( divStyle.marginLeft ) === 12;
 
@@ -6182,6 +6319,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 		// Support: IE 9 - 11 only
 		// Detect misreporting of content dimensions for box-sizing:border-box elements
 		boxSizingReliableVal = roundPixelMeasures( divStyle.width ) === 36;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 		// Support: IE 9 only
 		// Detect overflow:scroll screwiness (gh-3699)
@@ -6394,6 +6532,12 @@ function boxModelAdjustment( elem, dimension, box, isBorderBox, styles, computed
 			// Add padding
 			delta += jQuery.css( elem, "padding" + cssExpand[ i ], true, styles );
 
+<<<<<<< HEAD
+		// Some non-html elements return undefined for offsetWidth, so check for null/undefined
+		// svg - https://bugzilla.mozilla.org/show_bug.cgi?id=649285
+		// MathML - https://bugzilla.mozilla.org/show_bug.cgi?id=491668
+		if ( val <= 0 || val == null ) {
+=======
 			// For "border" or "margin", add border
 			if ( box !== "padding" ) {
 				delta += jQuery.css( elem, "border" + cssExpand[ i ] + "Width", true, styles );
@@ -6406,6 +6550,7 @@ function boxModelAdjustment( elem, dimension, box, isBorderBox, styles, computed
 		// If we get here with a border-box (content + padding + border), we're seeking "content" or
 		// "padding" or "margin"
 		} else {
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 			// For "content", subtract padding
 			if ( box === "content" ) {
@@ -7839,6 +7984,32 @@ if ( !support.optSelected ) {
 
 			/* eslint no-unused-expressions: "off" */
 
+<<<<<<< HEAD
+	// Support: IE <=11 only
+	// Accessing the selectedIndex property
+	// forces the browser to respect setting selected
+	// on the option
+	// The getter ensures a default option is selected
+	// when in an optgroup
+	if ( !support.optSelected ) {
+		jQuery.propHooks.selected = {
+			get: function( elem ) {
+				var parent = elem.parentNode;
+				if ( parent && parent.parentNode ) {
+					parent.parentNode.selectedIndex;
+				}
+				return null;
+			},
+			set: function( elem ) {
+				var parent = elem.parentNode;
+				if ( parent ) {
+					parent.selectedIndex;
+
+					if ( parent.parentNode ) {
+						parent.parentNode.selectedIndex;
+					}
+				}
+=======
 			var parent = elem.parentNode;
 			if ( parent ) {
 				parent.selectedIndex;
@@ -7846,6 +8017,7 @@ if ( !support.optSelected ) {
 				if ( parent.parentNode ) {
 					parent.parentNode.selectedIndex;
 				}
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			}
 		}
 	};
@@ -8052,6 +8224,11 @@ jQuery.fn.extend( {
 } );
 
 
+<<<<<<< HEAD
+	var rreturn = /\r/g,
+		rspaces = /[\x20\t\r\n\f]+/g;
+=======
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 
 var rreturn = /\r/g;
@@ -8153,8 +8330,20 @@ jQuery.extend( {
 				if ( index < 0 ) {
 					i = max;
 
+<<<<<<< HEAD
+					var val = jQuery.find.attr( elem, "value" );
+					return val != null ?
+						val :
+
+						// Support: IE10-11+
+						// option.text throws exceptions (#14686, #14858)
+						// Strip and collapse whitespace
+						// https://html.spec.whatwg.org/#strip-and-collapse-whitespace
+						jQuery.trim( jQuery.text( elem ) ).replace( rspaces, " " );
+=======
 				} else {
 					i = one ? index : 0;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 				}
 
 				// Loop through all the selected options
@@ -8170,12 +8359,21 @@ jQuery.extend( {
 							( !option.parentNode.disabled ||
 								!nodeName( option.parentNode, "optgroup" ) ) ) {
 
+<<<<<<< HEAD
+					while ( i-- ) {
+						option = options[ i ];
+						if ( option.selected =
+							jQuery.inArray( jQuery.valHooks.option.get( option ), values ) > -1
+						) {
+							optionSet = true;
+=======
 						// Get the specific value for the option
 						value = jQuery( option ).val();
 
 						// We don't need an array for one selects
 						if ( one ) {
 							return value;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 						}
 
 						// Multi-Selects return an array
@@ -8377,6 +8575,21 @@ jQuery.extend( jQuery.event, {
 
 					elem[ type ]();
 
+<<<<<<< HEAD
+		// Piggyback on a donor event to simulate a different one
+		// Used only for `focus(in | out)` events
+		simulate: function( type, elem, event ) {
+			var e = jQuery.extend(
+				new jQuery.Event(),
+				event,
+				{
+					type: type,
+					isSimulated: true
+				}
+			);
+
+			jQuery.event.trigger( e, null, elem );
+=======
 					if ( event.isPropagationStopped() ) {
 						lastElement.removeEventListener( type, stopPropagationCallback );
 					}
@@ -8388,6 +8601,7 @@ jQuery.extend( jQuery.event, {
 					}
 				}
 			}
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 		}
 
 		return event.result;
@@ -9887,6 +10101,28 @@ support.createHTMLDocument = ( function() {
 } )();
 
 
+<<<<<<< HEAD
+	// Argument "data" should be string of html
+	// context (optional): If specified, the fragment will be created in this context,
+	// defaults to document
+	// keepScripts (optional): If true, will include scripts passed in the html string
+	jQuery.parseHTML = function( data, context, keepScripts ) {
+		if ( !data || typeof data !== "string" ) {
+			return null;
+		}
+		if ( typeof context === "boolean" ) {
+			keepScripts = context;
+			context = false;
+		}
+		context = context || document;
+
+		var parsed = rsingleTag.exec( data ),
+			scripts = !keepScripts && [];
+
+		// Single tag
+		if ( parsed ) {
+			return [ context.createElement( parsed[ 1 ] ) ];
+=======
 // Argument "data" should be string of html
 // context (optional): If specified, the fragment will be created in this context,
 // defaults to document
@@ -9917,6 +10153,7 @@ jQuery.parseHTML = function( data, context, keepScripts ) {
 			context.head.appendChild( base );
 		} else {
 			context = document;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 		}
 	}
 
@@ -9988,12 +10225,22 @@ jQuery.fn.load = function( url, params, callback ) {
 				// Otherwise use the full result
 				responseText );
 
+<<<<<<< HEAD
+			// If the request succeeds, this function gets "data", "status", "jqXHR"
+			// but they are ignored because response was set above.
+			// If it fails, this function gets "jqXHR", "status", "error"
+			} ).always( callback && function( jqXHR, status ) {
+				self.each( function() {
+					callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
+				} );
+=======
 		// If the request succeeds, this function gets "data", "status", "jqXHR"
 		// but they are ignored because response was set above.
 		// If it fails, this function gets "jqXHR", "status", "error"
 		} ).always( callback && function( jqXHR, status ) {
 			self.each( function() {
 				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			} );
 		} );
 	}
@@ -10196,12 +10443,18 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	jQuery.fn[ method ] = function( val ) {
 		return access( this, function( elem, method, val ) {
 
+<<<<<<< HEAD
+				// Add offsetParent borders
+				parentOffset.top += jQuery.css( offsetParent[ 0 ], "borderTopWidth", true );
+				parentOffset.left += jQuery.css( offsetParent[ 0 ], "borderLeftWidth", true );
+=======
 			// Coalesce documents and windows
 			var win;
 			if ( isWindow( elem ) ) {
 				win = elem;
 			} else if ( elem.nodeType === 9 ) {
 				win = elem.defaultView;
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 			}
 
 			if ( val === undefined ) {

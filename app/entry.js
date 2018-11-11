@@ -1,9 +1,22 @@
 'use strict';
+<<<<<<< HEAD
+const  $ = require('jquery');
+const  block = $('#block');
+const  scalingButton = $('#scaling-button');
+// jqueryオブジェクト作成
+const movingButton = $('#moving-button');
+=======
 import $ from 'jquery';
 const block = $('#block');
 const scalingButton = $('#scaling-button');
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 scalingButton.click(() => {
   block.animate({ width: '200pt', height: '200pt' }, 2000);
   block.animate({ width: '100pt', height: '100pt' }, 2000);
+});
+
+movingButton.click(() => {
+  block.animate({ 'marginLeft': '500px' },500);
+  block.animate({ 'marginLeft': '20px' },1000);
 });
