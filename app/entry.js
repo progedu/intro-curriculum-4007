@@ -1,9 +1,15 @@
 'use strict';
+<<<<<<< HEAD
 const  $ = require('jquery');
 const  block = $('#block');
 const  scalingButton = $('#scaling-button');
 // jqueryオブジェクト作成
 const movingButton = $('#moving-button');
+=======
+import $ from 'jquery';
+const block = $('#block');
+const scalingButton = $('#scaling-button');
+>>>>>>> 86aa58bf91d94056b5a48fe8f6eeb9390dbd9867
 
 scalingButton.click(() => {
   block.animate({ width: '200pt', height: '200pt' }, 2000);
