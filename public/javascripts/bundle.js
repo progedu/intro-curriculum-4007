@@ -94,7 +94,18 @@
 var $ = __webpack_require__(1);
 
 var block = $('#block');
+var scalingButton = $('#scaling-button');
 var movingButton = $('#moving-button');
+scalingButton.click(function () {
+  block.animate({
+    width: '200pt',
+    height: '200pt'
+  }, 2000);
+  block.animate({
+    width: '100pt',
+    height: '100pt'
+  }, 2000);
+});
 movingButton.click(function () {
   block.animate({
     'marginLeft': '500px'
