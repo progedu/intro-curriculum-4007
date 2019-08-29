@@ -86,17 +86,16 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 
+var $ = __webpack_require__(1);
 
-var block = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block');
-var scalingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#scaling-button');
+var block = $('#block');
+var scalingButton = $('#scaling-button');
+var movingButton = $('#moving-button');
 scalingButton.click(function () {
   block.animate({
     width: '200pt',
@@ -106,6 +105,14 @@ scalingButton.click(function () {
     width: '100pt',
     height: '100pt'
   }, 2000);
+});
+movingButton.click(function () {
+  block.animate({
+    'marginLeft': '500px'
+  }, 500);
+  block.animate({
+    'marginLeft': '20px'
+  }, 1000);
 });
 
 /***/ }),
