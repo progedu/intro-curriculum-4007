@@ -8,8 +8,12 @@ a {
 }
 
 .block {
-  width: 100pt;
-  height: 100pt;
-  margin: 20pt;
-  background-color: chocolate;
+  width: 100px;
+  height: 100px;
+  margin: 30px 30px 30px 35px;
+  background-color: rgb(112, 245, 50);
+}
+
+button {
+  margin-right: 10px;
 }
