@@ -110,9 +110,11 @@ scalingButton.click(function () {
 });
 moveToRightButton.click(function () {
   block.animate({
-    marginLeft: '500px'
+    marginLeft: '500px',
+    borderRadius: '50%'
   }, 800);
   block.animate({
+    borderRadius: '0%',
     marginLeft: '20px'
   }, 1000);
 });

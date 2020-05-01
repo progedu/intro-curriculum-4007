@@ -10,6 +10,12 @@ scalingButton.click(() => {
 });
 
 moveToRightButton.click(() => {
-  block.animate({marginLeft: '500px'}, 800);
-  block.animate({marginLeft: '20px'}, 1000);
+  block.animate({
+    marginLeft: '500px',
+    borderRadius: '50%'
+  }, 800);
+  block.animate({
+    borderRadius: '0%',
+    marginLeft: '20px'
+  }, 1000);
 });
