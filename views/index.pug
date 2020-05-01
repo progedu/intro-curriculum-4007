@@ -5,9 +5,10 @@ block content
   p Welcome to #{title}
   if user
     p Hello, #{user.username}
-    a(href="/logout") Logout
+    a.logout(href="/logout") Logout
   else
-    a(href="/login") Login
+    a.login(href="/login") Login
   div#block.block
-  button#scaling-button 拡大縮小
+  button#scaling-button.scaler 拡大縮小
+  button#moving-button.mover 移動
   script(src="/javascripts/bundle.js")

@@ -3,8 +3,21 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.login {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-size: 16pt;
+  background-color: #0066FF;
+  border-radius: 5px;
+  transition: 500ms;
+}
+
+.login:hover {
+  background-color: #00AAFF;
 }
 
 .block {
@@ -12,4 +25,34 @@ a {
   height: 100pt;
   margin: 20pt;
   background-color: chocolate;
+}
+
+.scaler {
+  padding: 3px;
+  margin: 5px;
+  color: #fff;
+  background-color: #0066FF;
+  border-style: none;
+  border-radius: 5px;
+  border-color: #0066FF;
+  transition: 500ms;
+}
+
+.scaler:hover {
+  background-color: #00AAFF;
+}
+
+.mover {
+  padding: 3px;
+  margin: 5px;
+  color: #fff;
+  background-color: #0066FF;
+  border-style: none;
+  border-radius: 5px;
+  border-color: #0066FF;
+  transition: 500ms;
+}
+
+.mover:hover {
+  background-color: #00AAFF;
 }
