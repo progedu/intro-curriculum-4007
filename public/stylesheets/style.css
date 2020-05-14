@@ -13,3 +13,7 @@ a {
   margin: 20pt;
   background-color: chocolate;
 }
+
+#moving-button {
+  margin-left: 10px;
+}
