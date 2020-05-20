@@ -11,5 +11,6 @@ a {
   width: 100pt;
   height: 100pt;
   margin: 20pt;
-  background-color: chocolate;
+  border-radius: 0pt;
+  background-color: goldenrod;
 }
