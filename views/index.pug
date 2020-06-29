@@ -8,6 +8,27 @@ block content
     a(href="/logout") Logout
   else
     a(href="/login") Login
-  div#block.block
+  p
+  div.multiBlock
+  div.multiBlock
+  div.multiBlock
+  //div.endがないと改行できない
+  div.end
   button#scaling-button 拡大縮小
+  br
+  button#moving-button 移動
+  br
+  button#rounding-button 角丸
+  br
+  p マウスオーバー
+  div#block.block
+  div.end
+  p 偶数だけ赤くなる
+  li 1
+  li 2
+  li 3
+  li 4
+  li 5
+  .end
+  dr
   script(src="/javascripts/bundle.js")

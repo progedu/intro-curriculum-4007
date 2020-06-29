@@ -8,8 +8,21 @@ a {
 }
 
 .block {
+  float: left;
   width: 100pt;
   height: 100pt;
   margin: 20pt;
-  background-color: chocolate;
+  background-color: #6bee2e;
+}
+
+.multiBlock {
+  float: left;
+  width: 100pt;
+  height: 100pt;
+  margin: 20pt;
+  background-color: #045a94;
+}
+
+.end {
+  clear: both;
 }
