@@ -8,8 +8,8 @@ a {
 }
 
 .block {
-  width: 100pt;
-  height: 100pt;
-  margin: 20pt;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
   background-color: chocolate;
 }
