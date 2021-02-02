@@ -94,6 +94,7 @@
 var $ = __webpack_require__(1);
 
 var block = $('#block');
+var block1 = $('#block1');
 var scalingButton = $('#scaling-button');
 var movingButton = $('#moving-button');
 scalingButton.click(function () {
@@ -115,6 +116,11 @@ movingButton.click(function () {
   block.animate({
     'marginLeft': '20px'
   }, 1000);
+});
+block1.click(function () {
+  block1.animate({
+    opacity: 0
+  }, 500);
 });
 
 /***/ }),

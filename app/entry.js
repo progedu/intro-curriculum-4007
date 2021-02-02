@@ -1,6 +1,7 @@
 'use strict';
 const  $ = require('jquery');
 const  block = $('#block');
+const  block1 = $('#block1');
 const  scalingButton = $('#scaling-button');
 const movingButton = $('#moving-button');
 
@@ -14,4 +15,8 @@ scalingButton.click(() => {
 movingButton.click(() => {
   block.animate({ 'marginLeft':'500px' }, 500);
   block.animate({ 'marginLeft':'20px' }, 1000);
+});
+
+block1.click(()=>{
+  block1.animate({ opacity : 0}, 500);
 });
