@@ -97,7 +97,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var block = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block');
 var scalingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#scaling-button');
-var movingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#moving-button');
+var bigButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#big-button');
+var smallButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#small-button');
 scalingButton.on('click', function () {
   block.animate({
     width: '200pt',
@@ -107,14 +108,42 @@ scalingButton.on('click', function () {
     width: '100pt',
     height: '100pt'
   }, 2000);
-});
-movingButton.on('click', function () {
+}); // クリックするたびに大きくなる
+
+bigButton.on('click', function () {
+  //  block.animate({ 'marginLeft': '500px' }, 500);
+  //  block.animate({ 'marginLeft': '20px' }, 1000);
   block.animate({
-    'marginLeft': '500px'
+    width: '+=100',
+    height: '+=500'
   }, 500);
+}); // クリックするたびに小さくなる
+
+smallButton.on('click', function () {
   block.animate({
-    'marginLeft': '20px'
-  }, 1000);
+    width: '-=100',
+    height: '-=500'
+  }, 500);
+});
+block.hover(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).stop().animate({
+    zIndex: 1
+  }, {
+    duration: 400,
+    step: function step(now) {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css({
+        transform: 'rotate(' + now * 360 + 'deg)'
+      });
+    },
+    complete: function complete() {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css('zIndex', 0);
+    }
+  });
+}, function () {
+  //角度を初期値に戻す
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).css({
+    transform: 'rotate(0deg)'
+  });
 });
 
 /***/ }),
