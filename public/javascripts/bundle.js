@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 var block = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block');
 var scalingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#scaling-button');
 var movingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#moving-button');
-scalingButton.click(function () {
+scalingButton.on('click', function () {
   block.animate({
     width: '200pt',
     height: '200pt'
@@ -108,7 +108,7 @@ scalingButton.click(function () {
     height: '100pt'
   }, 2000);
 });
-movingButton.click(function () {
+movingButton.on('click', function () {
   block.animate({
     'marginLeft': '500px'
   }, 500);
