@@ -100,7 +100,7 @@ var movingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#moving-button
 movingButton.click(function () {
   block.animate({
     'marginLeft': '500px'
-  }, 1000);
+  }, 500);
   block.animate({
     'marginLeft': '20px'
   }, 1000);
