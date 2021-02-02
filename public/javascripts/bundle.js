@@ -99,6 +99,11 @@ var block = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#block');
 var scalingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#scaling-button');
 var movingButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#moving-button');
 scalingButton.click(function () {
+  // 回転しながら現れる
+  block.fadeIn(1500);
+  block.css({
+    "transform": "rotateY(0deg)"
+  });
   block.animate({
     width: '200pt',
     height: '200pt'
@@ -106,15 +111,30 @@ scalingButton.click(function () {
   block.animate({
     width: '100pt',
     height: '100pt'
-  }, 2000);
+  }, 2000); // 消える
+
+  block.fadeOut(1500);
+  block.css({
+    "transform": "rotateY(0deg)"
+  });
 });
 movingButton.click(function () {
+  // 回転しながら現れる
+  block.fadeIn(1500);
+  block.css({
+    "transform": "rotateY(0deg)"
+  });
   block.animate({
     'marginLeft': '500px'
   }, 500);
   block.animate({
     'marginLeft': '20px'
-  }, 1000);
+  }, 1000); // 消える
+
+  block.fadeOut(1500);
+  block.css({
+    "transform": "rotateY(0deg)"
+  });
 });
 
 /***/ }),
