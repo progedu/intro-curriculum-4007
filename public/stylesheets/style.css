@@ -8,8 +8,51 @@ a {
 }
 
 .block {
-  width: 100pt;
-  height: 100pt;
-  margin: 20pt;
-  background-color: chocolate;
+  width: 130px;
+  height: 130px;
+  margin: 20px;
+  background: linear-gradient(45deg,#e647e6 0%, #00B7FF 100%);
+  position: relative;
+}
+
+.move {
+  margin-left: 450px;
+}
+
+#text1 {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 3px #e647e6;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+}
+
+#text2 {
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 3px #00B7FF;
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+}
+
+button {
+  color: #e647e6;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#root,h1,p {
+  color: #e647e6;
 }
