@@ -28,7 +28,7 @@ smallButton.on('click', () => {
   }, 500);
 });
 
-//マウスオーバー時に回転（ほぼコピペ。。）
+//マウスオーバー時に回転（ほぼコピペ。。）アロー関数だとうまく動かなかった！
 block.hover(function () {
   $(this).stop().animate({ zIndex: 1 }, {
     duration: 400,
