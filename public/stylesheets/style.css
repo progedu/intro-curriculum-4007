@@ -12,4 +12,7 @@ a {
   height: 100pt;
   margin: 20pt;
   background-color: chocolate;
+  transition: transform 2s;
+  transform: rotateY(360deg);
+  display: none;
 }
