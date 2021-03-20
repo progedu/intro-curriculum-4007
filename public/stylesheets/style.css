@@ -13,3 +13,7 @@ a {
   margin: 20pt;
   background-color: chocolate;
 }
+
+button {
+  margin: 10px;
+}
